@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Jacob Valdez <jacob.valdez@limboid.ai>"]
 license = "MIT"
-readme = "README.md"
+readme = "README"
 
 [tool.poetry.dependencies]
 python = "^3.10"
