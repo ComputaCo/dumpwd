@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dumpwd"
-version = "0.1.2"
+version = "0.1.3"
 description = ""
 authors = ["Jacob Valdez <jacob.valdez@limboid.ai>"]
 license = "MIT"
