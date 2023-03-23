@@ -93,17 +93,7 @@ def get_files(
         return
 
     def print_file_contents(file_path: str, contents: str):
-        print(
-            textwrap.dedent(
-                f"""
-            # {file_path}:
-
-            ```
-            {contents}
-            ```
-            """.strip()
-            )
-        )
+        print(f"# {file_path}:\n```\n{contents}\n```\n\n")
 
     for name, contents in inodes:
         current_path = os.path.join(path, name)
