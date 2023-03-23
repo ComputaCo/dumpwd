@@ -1,5 +1,6 @@
 import os
 import fnmatch
+import textwrap
 from typing import List, Union, Tuple
 import fnmatch
 
@@ -92,7 +93,17 @@ def get_files(
         return
 
     def print_file_contents(file_path: str, contents: str):
-        print(f"\n{file_path}:\n{contents}\n" + 64 * "=" + "\n")
+        print(
+            textwrap.dedent(
+                f"""
+            # {file_path}:
+
+            ```
+            {contents}
+            ```
+            """.strip()
+            )
+        )
 
     for name, contents in inodes:
         current_path = os.path.join(path, name)

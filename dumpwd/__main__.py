@@ -29,12 +29,10 @@ def main(
     If `read_files` is set, the contents of the files will also be printed.
     """
     # Get the contents
-    inodes = get_inodes(
-        path, exclude=exclude, read_files=read_files, max_depth=max_depth
-    )
+    inodes = get_inodes(path, exclude=exclude, read_files=read_files, max_depth=max_depth)
 
     # Print the tree
-    get_tree(inodes, prefix=path, max_depth=max_depth)
+    get_tree(inodes, prefix="", max_depth=max_depth)
 
     # Print the file contents if `read_files` is set
     get_files(inodes, path=path, max_depth=max_depth)
