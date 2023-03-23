@@ -47,6 +47,9 @@ def get_inodes(
                 inodes.append((entry.name, contents))
             elif entry.is_dir():
                 inodes.append((entry.name, dfs(entry.path, depth - 1)))
+
+        # sort inodes
+        inodes.sort(key=lambda x: x[0])
         return inodes
 
     return dfs(path, max_depth)
