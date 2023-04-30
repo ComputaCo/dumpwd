@@ -1,9 +1,6 @@
 # `dumpwd`
 
-<figure>
-  <img align="right" width="300" height="300" src="https://raw.githubusercontent.com/Limboid/dumpwd/main/assets/theme_image.png" alt="Image Description">
-  <figcaption>created with DeepFloyd</figcaption>
-</figure>
+<img align="right" width="300" height="300" src="https://raw.githubusercontent.com/Limboid/dumpwd/main/assets/theme_image.png">
 
 ## Overview:
 
