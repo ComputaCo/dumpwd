@@ -4,7 +4,7 @@ version = "0.2.0"
 description = ""
 authors = ["Jacob Valdez <jacob.valdez@limboid.ai>"]
 repository = "https://github.com/Limboid/dumpwd"
-homepage = "https://github.com/Limboid/dumpwd"
+homepage = "https://limboid.ai/dumpwd/"
 license = "MIT"
 readme = "README.md"
 
