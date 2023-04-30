@@ -1,14 +1,15 @@
 import fnmatch
+import logging
 import math
 import os
 
-from dumpwd._consts import IGNORE_PREFIXES
+from dumpwd._internal.consts import IGNORE_PREFIXES
 
 
 def get_inodes(
     path: str,
     exclude: str | list[str] = IGNORE_PREFIXES,
-    read_files: bool = True,
+    read: bool = True,
     depth: int = None,
 ) -> list[tuple[str, str | list]]:
     """
@@ -25,13 +26,15 @@ def get_inodes(
 
     if isinstance(exclude, str):
         exclude = [exclude]
-    elif exclude is None:
-        exclude = []
 
-    def is_excluded(file: str) -> bool:
+    def is_excluded(entry) -> bool:
         for pattern in exclude:
-            if fnmatch.fnmatch(file, pattern):
+            if fnmatch.fnmatch(entry.path, pattern) or fnmatch.fnmatch(
+                entry.name, pattern
+            ):
+                logging.info(f"Excluding {entry.path} because it matches {pattern}")
                 return True
+
         return False
 
     def is_text(file: str) -> bool:
@@ -47,13 +50,13 @@ def get_inodes(
             return []
         inodes = []
         for entry in os.scandir(directory):
-            if is_excluded(entry.name):
+            if is_excluded(entry):
                 continue
             if entry.is_file():
                 if not is_text(entry.path):
                     continue
                 contents = None
-                if read_files:
+                if read:
                     with open(entry.path, "r") as f:
                         contents = f.read()
                 inodes.append((entry.name, contents))

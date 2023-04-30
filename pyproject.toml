@@ -6,6 +6,9 @@ authors = ["Jacob Valdez <jacob.valdez@limboid.ai>"]
 license = "MIT"
 readme = "README"
 
+[tool.poetry.scripts]
+dumpwd = "dumpwd.__main__:app"
+
 [tool.poetry.dependencies]
 python = "^3.10"
 typer = "^0.7.0"
