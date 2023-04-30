@@ -3,8 +3,10 @@ name = "dumpwd"
 version = "0.2.0"
 description = ""
 authors = ["Jacob Valdez <jacob.valdez@limboid.ai>"]
+repository = "https://github.com/Limboid/dumpwd"
+homepage = "https://github.com/Limboid/dumpwd"
 license = "MIT"
-readme = "README"
+readme = "README.md"
 
 [tool.poetry.scripts]
 dumpwd = "dumpwd.__main__:app"
