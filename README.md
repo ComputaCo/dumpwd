@@ -1,6 +1,6 @@
 # `dumpwd`
 
-<img align="right" width="100" height="100" src="https://raw.githubusercontent.com/Limboid/dumpwd/main/assets/theme_image.png">
+<img align="right" width="300" height="300" src="https://raw.githubusercontent.com/Limboid/dumpwd/main/assets/theme_image.png">
 
 ## Overview:
 
